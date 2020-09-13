@@ -1,0 +1,23 @@
+---
+layout: default
+published: true
+---
+
+<div class="posts">
+  {% for post in site.posts limit:3 %}
+    <article class="post">
+
+      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+
+      <div class="entry">
+        {{ post.excerpt }}
+      </div>
+
+      <a href="{{ site.baseurl }}{{ post.url }}" class="btn">Seguir leyendo</a>
+    </article>
+  {% endfor %}
+
+  <h1>Publicaciones anteriores</h1>
+  <a href="{{ site.baseurl }}/archive" class="btn">Ir al archivo</a>
+</div>
+

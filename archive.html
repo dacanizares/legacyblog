@@ -1,0 +1,11 @@
+---
+layout: page
+title: Archivo
+permalink: /archive/
+published: true
+---
+
+{% for post in site.posts %}
+    {{ post.date | date: "%d/%m/%Y" }}: <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    <br />
+{% endfor %}
